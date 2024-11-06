@@ -7,7 +7,12 @@ public class Kata
 	{
 		if (IsInputInvalid(input))
 			return "invalid input";
-		
+
+		return MaxAndMinValuesOf(input);
+	}
+
+	private static string MaxAndMinValuesOf(string input)
+	{
 		var numbers = input.Split(" ");
 		return numbers.Max() + " " + numbers.Min();
 	}
