@@ -11,4 +11,12 @@ public class UnitTest1
 
         Assert.Equal("0", result);
     }
+    
+    [Fact(DisplayName = "Om input innehåller ett tal anses det vara både högst och lägst")]
+    public void HighAndLow_InputIsOneNumber_ReturnsNumberForBothHighestAndLowest()
+    {
+        var result = Kata.HighAndLow("1");
+
+        Assert.Equal("1,1", result);
+    }
 }
