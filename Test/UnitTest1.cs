@@ -7,6 +7,7 @@ public class UnitTest1
     [Theory(DisplayName = "Om input är invalid returneras specialvärdet 0")]
     [InlineData(null)]
     [InlineData("")]
+    [InlineData(" ")]
     public void HighAndLow_InputIsInvalid_ReturnsZero(string input)
     {
         var result = Kata.HighAndLow(input);
