@@ -4,10 +4,12 @@ namespace Test;
 
 public class UnitTest1
 {
-    [Fact(DisplayName = "Om input är null returneras specialvärdet 0")]
-    public void HighAndLow_InputIsNull_ReturnsZero()
+    [Theory(DisplayName = "Om input är invalid returneras specialvärdet 0")]
+    [InlineData(null)]
+    [InlineData("")]
+    public void HighAndLow_InputIsInvalid_ReturnsZero(string input)
     {
-        var result = Kata.HighAndLow(null);
+        var result = Kata.HighAndLow(input);
 
         Assert.Equal("0", result);
     }

@@ -5,6 +5,6 @@ public class Kata
 {
 	public static string HighAndLow(string input)
 	{
-		return input == null ? "0" : "1,1";
+		return input == null || string.IsNullOrEmpty(input) ? "0" : "1,1";
 	}
 }
