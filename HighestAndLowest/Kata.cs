@@ -6,7 +6,7 @@ public class Kata
 	public static string HighAndLow(string input)
 	{
 		if (IsInputInvalid(input))
-			return "0";
+			return "invalid input";
 		
 		if (input.Length == 1) 
 			return input + " " + input;

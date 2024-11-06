@@ -12,7 +12,7 @@ public class UnitTest1
     {
         var result = Kata.HighAndLow(input);
 
-        Assert.Equal("0", result);
+        Assert.Equal("invalid input", result);
     }
     
     [Theory(DisplayName = "Om input innehåller ett tal anses det vara både högst och lägst")]
