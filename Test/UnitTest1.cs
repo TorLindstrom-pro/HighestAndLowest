@@ -11,4 +11,12 @@ public class UnitTest1
 
         Assert.IsType<string>(result);
     }
+
+    [Fact(DisplayName = "Om input är null returneras specialvärdet 0")]
+    public void HighAndLow_InputIsNull_ReturnsZero()
+    {
+        var result = Kata.HighAndLow(null);
+
+        Assert.Equal("0", result);
+    }
 }
