@@ -19,6 +19,6 @@ public class Kata
 
 	private static bool InputIsInvalid(string input)
 	{
-		return input == null || string.IsNullOrWhiteSpace(input);
+		return string.IsNullOrWhiteSpace(input);
 	}
 }
