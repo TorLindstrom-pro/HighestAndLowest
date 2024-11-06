@@ -5,6 +5,6 @@ public class Kata
 {
 	public static string HighAndLow(string input)
 	{
-		return "";
+		return "0";
 	}
 }
