@@ -15,11 +15,21 @@ public class UnitTest1
         Assert.Equal("0", result);
     }
     
-    [Fact(DisplayName = "Om input innehåller ett tal anses det vara både högst och lägst")]
-    public void HighAndLow_InputIsOneNumber_ReturnsNumberForBothHighestAndLowest()
+    [Theory(DisplayName = "Om input innehåller ett tal anses det vara både högst och lägst")]
+    [InlineData("1", "1 1")]
+    [InlineData("2", "2 2")]
+    public void HighAndLow_InputIsOneNumber_ReturnsNumberForBothHighestAndLowest(string input, string expected)
     {
-        var result = Kata.HighAndLow("1");
+        var result = Kata.HighAndLow(input);
 
-        Assert.Equal("1,1", result);
+        Assert.Equal(expected, result);
+    }
+    
+    [Fact(DisplayName = "Om input innehåller två olika tal returneras högst och lägst")]
+    public void HighAndLow_InputIstwoDifferentNumbers_ReturnsHighestAndLowest()
+    {
+        var result = Kata.HighAndLow("2 1");
+
+        Assert.Equal("2 1", result);
     }
 }

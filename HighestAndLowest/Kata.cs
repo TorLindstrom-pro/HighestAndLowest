@@ -7,8 +7,11 @@ public class Kata
 	{
 		if (IsInputInvalid(input))
 			return "0";
-		else
-			return "1,1";
+		
+		if (input.Length == 1) 
+			return input + " " + input;
+
+		return input;
 	}
 
 	private static bool IsInputInvalid(string input)
