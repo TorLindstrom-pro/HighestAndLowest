@@ -5,7 +5,7 @@ public class Kata
 {
 	public static string HighAndLow(string input)
 	{
-		if (IsInputInvalid(input))
+		if (InputIsInvalid(input))
 			return "invalid input";
 
 		return MaxAndMinValuesOf(input);
@@ -17,7 +17,7 @@ public class Kata
 		return numbers.Max() + " " + numbers.Min();
 	}
 
-	private static bool IsInputInvalid(string input)
+	private static bool InputIsInvalid(string input)
 	{
 		return input == null || string.IsNullOrWhiteSpace(input);
 	}
