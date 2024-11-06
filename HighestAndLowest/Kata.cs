@@ -3,8 +3,8 @@ namespace Test;
 
 public class Kata
 {
-	public static void HighAndLow(string input)
+	public static string HighAndLow(string input)
 	{
-		throw new NotImplementedException();
+		return "";
 	}
 }
