@@ -5,7 +5,10 @@ public class Kata
 {
 	public static string HighAndLow(string input)
 	{
-		return IsInputInvalid(input) ? "0" : "1,1";
+		if (IsInputInvalid(input))
+			return "0";
+		else
+			return "1,1";
 	}
 
 	private static bool IsInputInvalid(string input)
