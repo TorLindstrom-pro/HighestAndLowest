@@ -1,5 +1,5 @@
 ﻿
-namespace Test;
+namespace HighestAndLowest;
 
 public class Kata
 {

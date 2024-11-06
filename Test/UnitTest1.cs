@@ -1,3 +1,5 @@
+using HighestAndLowest;
+
 namespace Test;
 
 public class UnitTest1
