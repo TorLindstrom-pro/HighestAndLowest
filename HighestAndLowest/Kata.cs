@@ -8,9 +8,6 @@ public class Kata
 		if (IsInputInvalid(input))
 			return "invalid input";
 		
-		if (input.Length == 1) 
-			return input + " " + input;
-
 		var numbers = input.Split(" ");
 		return numbers.Max() + " " + numbers.Min();
 	}
