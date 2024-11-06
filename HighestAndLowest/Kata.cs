@@ -11,7 +11,8 @@ public class Kata
 		if (input.Length == 1) 
 			return input + " " + input;
 
-		return input;
+		var numbers = input.Split(" ");
+		return numbers.Max() + " " + numbers.Min();
 	}
 
 	private static bool IsInputInvalid(string input)

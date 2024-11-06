@@ -25,11 +25,14 @@ public class UnitTest1
         Assert.Equal(expected, result);
     }
     
-    [Fact(DisplayName = "Om input innehåller två olika tal returneras högst och lägst")]
-    public void HighAndLow_InputIstwoDifferentNumbers_ReturnsHighestAndLowest()
+    [Theory(DisplayName = "Om input innehåller två olika tal returneras högst och lägst")]
+    [InlineData("2 1", "2 1")]
+    [InlineData("1 2", "2 1")]
+    [InlineData("1 2 3", "3 1")]
+    public void HighAndLow_InputIstwoDifferentNumbers_ReturnsHighestAndLowest(string input, string expected)
     {
-        var result = Kata.HighAndLow("2 1");
+        var result = Kata.HighAndLow(input);
 
-        Assert.Equal("2 1", result);
+        Assert.Equal(expected, result);
     }
 }
